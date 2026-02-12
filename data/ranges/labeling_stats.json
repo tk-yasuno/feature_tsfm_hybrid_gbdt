@@ -1,0 +1,13 @@
+{
+  "num_ranges_defined": 280,
+  "total_labeled_points": 108657,
+  "total_training_samples": 58300,
+  "lookback_days": 90,
+  "forecast_horizons": [
+    30,
+    60,
+    90
+  ],
+  "lower_percentile": 10,
+  "upper_percentile": 90
+}

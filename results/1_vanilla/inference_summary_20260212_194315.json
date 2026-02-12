@@ -1,0 +1,10 @@
+{
+  "timestamp": "20260212_194315",
+  "num_samples": 470,
+  "num_alerts": 0,
+  "alert_rate": 0.0,
+  "thresholds": {
+    "warning": 0.7,
+    "critical": 0.9
+  }
+}

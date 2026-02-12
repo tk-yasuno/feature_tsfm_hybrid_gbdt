@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-02-12T20:01:14.651629",
+  "num_samples": 470,
+  "metrics": {
+    "30d": {
+      "roc_auc": 0.0,
+      "pr_auc": 0.006401183384763652,
+      "precision": 0.010638297872340425,
+      "recall": 1.0,
+      "f1_score": 0.021052631578947368,
+      "accuracy": 0.010638297872340425,
+      "confusion_matrix": [
+        [
+          0,
+          465
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    "60d": {
+      "roc_auc": 0.202495894909688,
+      "pr_auc": 0.047262227094202566,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 0.925531914893617,
+      "confusion_matrix": [
+        [
+          435,
+          0
+        ],
+        [
+          35,
+          0
+        ]
+      ]
+    },
+    "90d": {
+      "roc_auc": 1.0,
+      "pr_auc": 0.9999999999999998,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 0.8617021276595744,
+      "confusion_matrix": [
+        [
+          405,
+          0
+        ],
+        [
+          65,
+          0
+        ]
+      ]
+    }
+  },
+  "leadtime_analysis": {
+    "30d": {
+      "threshold_0.5": {
+        "detection_rate": 1.0,
+        "detected": 5,
+        "total_anomalous": 5
+      },
+      "threshold_0.7": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 5
+      },
+      "threshold_0.9": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 5
+      }
+    },
+    "60d": {
+      "threshold_0.5": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 35
+      },
+      "threshold_0.7": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 35
+      },
+      "threshold_0.9": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 35
+      }
+    },
+    "90d": {
+      "threshold_0.5": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 65
+      },
+      "threshold_0.7": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 65
+      },
+      "threshold_0.9": {
+        "detection_rate": 0.0,
+        "detected": 0,
+        "total_anomalous": 65
+      }
+    }
+  }
+}

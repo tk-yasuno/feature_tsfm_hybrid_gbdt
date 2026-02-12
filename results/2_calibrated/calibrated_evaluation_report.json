@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-02-12T20:21:09.901803",
+  "num_samples": 353,
+  "comparison": {
+    "30": {
+      "raw": {
+        "roc_auc": 0.5977011494252874,
+        "pr_auc": 0.02056641631307566,
+        "precision": 0.014164305949008499,
+        "recall": 1.0,
+        "f1_score": 0.027932960893854747,
+        "accuracy": 0.014164305949008499,
+        "true_negatives": 0,
+        "false_positives": 348,
+        "false_negatives": 0,
+        "true_positives": 5,
+        "specificity": 0.0,
+        "sensitivity": 1.0
+      },
+      "calibrated": {
+        "roc_auc": 0.40229885057471265,
+        "pr_auc": 0.01401491720652157,
+        "precision": 0.014164305949008499,
+        "recall": 1.0,
+        "f1_score": 0.027932960893854747,
+        "accuracy": 0.014164305949008499,
+        "true_negatives": 0,
+        "false_positives": 348,
+        "false_negatives": 0,
+        "true_positives": 5,
+        "specificity": 0.0,
+        "sensitivity": 1.0
+      },
+      "improvements": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      }
+    },
+    "60": {
+      "raw": {
+        "roc_auc": 0.0857811834823329,
+        "pr_auc": 0.04734525466647667,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "accuracy": 0.9178470254957507,
+        "true_negatives": 324,
+        "false_positives": 0,
+        "false_negatives": 29,
+        "true_positives": 0,
+        "specificity": 1.0,
+        "sensitivity": 0.0
+      },
+      "calibrated": {
+        "roc_auc": 0.0857811834823329,
+        "pr_auc": 0.04734525466647667,
+        "precision": 0.0821529745042493,
+        "recall": 1.0,
+        "f1_score": 0.1518324607329843,
+        "accuracy": 0.0821529745042493,
+        "true_negatives": 0,
+        "false_positives": 324,
+        "false_negatives": 0,
+        "true_positives": 29,
+        "specificity": 0.0,
+        "sensitivity": 1.0
+      },
+      "improvements": {
+        "precision": Infinity,
+        "recall": Infinity,
+        "f1_score": Infinity
+      }
+    },
+    "90": {
+      "raw": {
+        "roc_auc": 0.994562298603652,
+        "pr_auc": 0.9805525079418658,
+        "precision": 0.7121212121212122,
+        "recall": 0.9591836734693877,
+        "f1_score": 0.8173913043478261,
+        "accuracy": 0.9405099150141643,
+        "true_negatives": 285,
+        "false_positives": 19,
+        "false_negatives": 2,
+        "true_positives": 47,
+        "specificity": 0.9375,
+        "sensitivity": 0.9591836734693877
+      },
+      "calibrated": {
+        "roc_auc": 0.005437701396348012,
+        "pr_auc": 0.07430561641493803,
+        "precision": 0.1388101983002833,
+        "recall": 1.0,
+        "f1_score": 0.24378109452736318,
+        "accuracy": 0.1388101983002833,
+        "true_negatives": 0,
+        "false_positives": 304,
+        "false_negatives": 0,
+        "true_positives": 49,
+        "specificity": 0.0,
+        "sensitivity": 1.0
+      },
+      "improvements": {
+        "precision": -80.50750406847087,
+        "recall": 4.255319148936175,
+        "f1_score": -70.17571715888641
+      }
+    }
+  },
+  "alert_distribution": {
+    "NORMAL": 353
+  }
+}
