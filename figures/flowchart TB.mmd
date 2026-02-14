@@ -1,0 +1,47 @@
+flowchart TB
+    Input["📊 入力データ: 90日分の時系列"]
+    
+    subgraph GraniteTS["🤖 Granite TS Path"]
+        Encoder["TinyTimeMixer Encoder<br/>Context: 90日 | d_model: 64"]
+        LoRA["LoRA適用<br/>Rank: 16 | Alpha: 32"]
+        TSEmb["64次元埋め込み<br/>backbone_hidden_state"]
+        
+        Encoder --> LoRA --> TSEmb
+    end
+    
+    subgraph Statistical["📈 Statistical Path"]
+        Extract["統計的特徴量抽出"]
+        Basic["基本統計 12個<br/>mean, std, median..."]
+        Trend["トレンド 5個<br/>slope, ratio..."]
+        Volatility["変動性 11個<br/>rolling std, drawdown..."]
+        StatFeatures["28次元統計特徴"]
+        
+        Extract --> Basic
+        Extract --> Trend
+        Extract --> Volatility
+        Basic --> StatFeatures
+        Trend --> StatFeatures
+        Volatility --> StatFeatures
+    end
+    
+    Fusion["⚡ 特徴融合: 92次元ハイブリッド特徴<br/>64 TS埋め込み + 28 統計"]
+    
+    Classifier["🌳 LightGBM分類器<br/>GBDT: 1000 trees | LR: 0.05 | Depth: 7"]
+    
+    Output["✅ 異常確率出力<br/>30d / 60d / 90d"]
+    
+    Input --> GraniteTS
+    Input --> Statistical
+    
+    TSEmb --> Fusion
+    StatFeatures --> Fusion
+    
+    Fusion --> Classifier
+    Classifier --> Output
+    
+    style Input fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Fusion fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style Classifier fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    style Output fill:#e8f5e9,stroke:#388e3c,stroke-width:3px
+    style GraniteTS fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style Statistical fill:#e0f2f1,stroke:#00796b,stroke-width:2px

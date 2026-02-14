@@ -1,0 +1,31 @@
+flowchart LR
+    Root["統計的特徴量<br/>28個"]
+    
+    subgraph Basic["基本統計 12個"]
+        B1["中心傾向<br/>mean<br/>median"]
+        B2["散らばり<br/>std<br/>range<br/>cv"]
+        B3["分位点<br/>q25<br/>q75<br/>iqr"]
+        B4["極値<br/>min<br/>max"]
+        B5["分布形状<br/>skewness<br/>kurtosis"]
+    end
+    
+    subgraph Trend["トレンド 5個"]
+        T1["線形<br/>trend_slope<br/>trend_intercept"]
+        T2["期間比較<br/>recent_vs_past_ratio<br/>recent_vs_past_diff"]
+        T3["変化率<br/>recent_change_rate"]
+    end
+    
+    subgraph Volatility["変動性 11個"]
+        V1["差分統計<br/>diff_mean<br/>diff_std<br/>diff_abs_mean"]
+        V2["ローリング統計<br/>rolling_std_7d<br/>rolling_std_14d<br/>rolling_std_30d"]
+        V3["ドローダウン<br/>max_drawdown<br/>mean_drawdown"]
+    end
+    
+    Root --> Basic
+    Root --> Trend
+    Root --> Volatility
+    
+    style Root fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Basic fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style Trend fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Volatility fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px

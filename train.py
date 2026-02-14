@@ -489,6 +489,11 @@ def load_and_split_data():
     print(f"  Train anomalies: {train_df['any_anomaly'].sum()} ({train_df['any_anomaly'].sum()/len(train_df)*100:.1f}%)")
     print(f"  Val anomalies: {val_df['any_anomaly'].sum()} ({val_df['any_anomaly'].sum()/len(val_df)*100:.1f}%)")
     
+    # Save test data for later evaluation
+    test_df_path = PROCESSED_DATA_DIR / "test_samples.csv"
+    test_df.to_csv(test_df_path, index=False, encoding='utf-8-sig')
+    print(f"💾 Test data saved: {test_df_path}")
+    
     # Apply SMOTE to training data only
     print("\n🔧 Applying SMOTE to balance training data...")
     train_df = apply_smote_to_training_data(train_df)
