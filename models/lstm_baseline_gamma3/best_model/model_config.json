@@ -1,0 +1,11 @@
+{
+  "hidden_size": 128,
+  "num_layers": 2,
+  "num_horizons": 3,
+  "forecast_horizons": [
+    30,
+    60,
+    90
+  ],
+  "lookback_days": 90
+}
